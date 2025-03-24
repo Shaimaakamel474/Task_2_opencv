@@ -212,6 +212,7 @@ def run_active_contour_demo(image_path, center_x=None, center_y = None, radius =
         center_x, center_y = image_center_x, image_center_y
     if radius is None:
         radius = min(img.shape) // 2 # Smaller initial radius
+    print(f"Radius: {radius}")
     theta = np.linspace(0, 2 * np.pi, 50, endpoint=False)
     initial_contour = np.column_stack([
         center_x + radius * np.cos(theta),
