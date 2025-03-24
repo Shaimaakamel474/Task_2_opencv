@@ -56,6 +56,9 @@ class ImageWidget(QWidget):
             # filtered=cv2.GaussianBlur(self.gray_img, (7, 7), 2)
             self.edges_Canny=cv2.Canny(self.gray_img, 50, 128)
             self.pixmap=self.convert_np_pixmap(self.image)
+
+            self.center_x, self.center_y = self.image.shape[1] // 2, self.image.shape[0] // 2
+            self.radius = min(self.image.shape) // 2
             
             # repaint
             self.update() 

@@ -195,7 +195,7 @@ class ActiveContourModel:
             plt.savefig(save_path)
         # plt.show()
 
-def run_active_contour_demo(image_path, initial_contour=None, alpha=0.1, beta=0.1, gamma=0.3,
+def run_active_contour_demo(image_path, center_x=None, center_y = None, radius = None, alpha=0.1, beta=0.1, gamma=0.3,
                             max_iterations=100, visualize=True):
     """Run the Active Contour Model demonstration"""
     # Load and preprocess the image
@@ -205,14 +205,19 @@ def run_active_contour_demo(image_path, initial_contour=None, alpha=0.1, beta=0.
     img = edges.astype(float)  # Use edge-detected image for active contour
 
     # Create initial contour if not provided
-    if initial_contour is None:
-        center_x, center_y = img.shape[1] // 2, img.shape[0] // 2
+    image_center_x, image_center_y = img.shape[1] // 2, img.shape[0] // 2
+    print(f"X-Center: {image_center_x}")
+    print(f"Y-Center: {image_center_y}")
+    if center_x is None and center_y is None:
+        center_x, center_y = image_center_x, image_center_y
+    if radius is None:
         radius = min(img.shape) // 2 # Smaller initial radius
-        theta = np.linspace(0, 2 * np.pi, 50, endpoint=False)
-        initial_contour = np.column_stack([
-            center_x + radius * np.cos(theta),
-            center_y + radius * np.sin(theta)
-        ]).astype(int)
+    theta = np.linspace(0, 2 * np.pi, 50, endpoint=False)
+    initial_contour = np.column_stack([
+        center_x + radius * np.cos(theta),
+        center_y + radius * np.sin(theta)
+    ]).astype(int)
+
 
     # Initialize and run the active contour model
     snake = ActiveContourModel(
@@ -251,7 +256,8 @@ if __name__ == "__main__":
     image_path = "img.jpeg"  # Replace with your image path
     results = run_active_contour_demo(
         image_path,
-        initial_contour=None,
+        center_x = None,
+        center_y = None,
         alpha=0.1,
         beta=0.2,
         gamma=0.8,

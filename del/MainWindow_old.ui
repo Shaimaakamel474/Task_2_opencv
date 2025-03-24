@@ -45,7 +45,7 @@
               <widget class="QLabel" name="label_13">
                <property name="font">
                 <font>
-                 
+                 <pointsize>-1</pointsize>
                 </font>
                </property>
                <property name="styleSheet">
@@ -65,8 +65,7 @@ border:None;
               <widget class="QLabel" name="Label_output_1">
                <property name="font">
                 <font>
-                 
-                 <weight>75</weight>
+                 <pointsize>-1</pointsize>
                  <bold>true</bold>
                 </font>
                </property>
@@ -109,7 +108,7 @@ border-radius:20px;</string>
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="Widget_Output_1" native="true">
+              <widget class="QWidget" name="Widget_Output_1" native="true">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                  <horstretch>0</horstretch>
@@ -154,8 +153,7 @@ background:#fdfdfd;
                    <widget class="QRadioButton" name="RadioButton_ActiveContour">
                     <property name="font">
                      <font>
-                      
-                      <weight>75</weight>
+                      <pointsize>-1</pointsize>
                       <bold>true</bold>
                      </font>
                     </property>
@@ -181,7 +179,7 @@ border-right:None;
                   <item>
                    <spacer name="verticalSpacer_8">
                     <property name="orientation">
-                     <enum>Qt::Vertical</enum>
+                     <enum>Qt::Orientation::Vertical</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -197,8 +195,7 @@ border-right:None;
                      <widget class="QLabel" name="label_param_3">
                       <property name="font">
                        <font>
-                        
-                        <weight>75</weight>
+                        <pointsize>-1</pointsize>
                         <bold>true</bold>
                        </font>
                       </property>
@@ -216,11 +213,10 @@ border:None;</string>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QDoubleSpinBox" name="rg_threshold_spinbox_3">
+                     <widget class="QSpinBox" name="rg_threshold_spinbox_3">
                       <property name="font">
                        <font>
-                        
-                        <weight>75</weight>
+                        <pointsize>-1</pointsize>
                         <bold>true</bold>
                        </font>
                       </property>
@@ -239,7 +235,7 @@ border-radius:7px;
                     <item>
                      <spacer name="horizontalSpacer_49">
                       <property name="orientation">
-                       <enum>Qt::Vertical</enum>
+                       <enum>Qt::Orientation::Vertical</enum>
                       </property>
                       <property name="sizeHint" stdset="0">
                        <size>
@@ -253,8 +249,7 @@ border-radius:7px;
                      <widget class="QLabel" name="label_param_6">
                       <property name="font">
                        <font>
-                        
-                        <weight>75</weight>
+                        <pointsize>-1</pointsize>
                         <bold>true</bold>
                        </font>
                       </property>
@@ -272,11 +267,10 @@ border:None;</string>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QDoubleSpinBox" name="rg_threshold_spinbox_4">
+                     <widget class="QSpinBox" name="rg_threshold_spinbox_4">
                       <property name="font">
                        <font>
-                        
-                        <weight>75</weight>
+                        <pointsize>-1</pointsize>
                         <bold>true</bold>
                        </font>
                       </property>
@@ -297,7 +291,7 @@ border-radius:7px;
                   <item>
                    <spacer name="verticalSpacer_9">
                     <property name="orientation">
-                     <enum>Qt::Vertical</enum>
+                     <enum>Qt::Orientation::Vertical</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -313,8 +307,7 @@ border-radius:7px;
                      <widget class="QLabel" name="label_param_15">
                       <property name="font">
                        <font>
-                        
-                        <weight>75</weight>
+                        <pointsize>-1</pointsize>
                         <bold>true</bold>
                        </font>
                       </property>
@@ -335,8 +328,7 @@ border:None;</string>
                      <widget class="QDoubleSpinBox" name="rg_threshold_spinbox_13">
                       <property name="font">
                        <font>
-                        
-                        <weight>75</weight>
+                        <pointsize>-1</pointsize>
                         <bold>true</bold>
                        </font>
                       </property>
@@ -355,7 +347,7 @@ border-radius:7px;
                     <item>
                      <spacer name="horizontalSpacer_47">
                       <property name="orientation">
-                       <enum>Qt::Vertical</enum>
+                       <enum>Qt::Orientation::Vertical</enum>
                       </property>
                       <property name="sizeHint" stdset="0">
                        <size>
@@ -369,8 +361,7 @@ border-radius:7px;
                      <widget class="QLabel" name="label_param_16">
                       <property name="font">
                        <font>
-                        
-                        <weight>75</weight>
+                        <pointsize>-1</pointsize>
                         <bold>true</bold>
                        </font>
                       </property>
@@ -388,11 +379,10 @@ border:None;</string>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QDoubleSpinBox" name="rg_threshold_spinbox_14">
+                     <widget class="QSpinBox" name="rg_threshold_spinbox_14">
                       <property name="font">
                        <font>
-                        
-                        <weight>75</weight>
+                        <pointsize>-1</pointsize>
                         <bold>true</bold>
                        </font>
                       </property>
@@ -413,7 +403,7 @@ border-radius:7px;
                   <item>
                    <spacer name="verticalSpacer_15">
                     <property name="orientation">
-                     <enum>Qt::Vertical</enum>
+                     <enum>Qt::Orientation::Vertical</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -429,8 +419,7 @@ border-radius:7px;
                      <widget class="QLabel" name="label_param_7">
                       <property name="font">
                        <font>
-                        
-                        <weight>75</weight>
+                        <pointsize>-1</pointsize>
                         <bold>true</bold>
                        </font>
                       </property>
@@ -451,8 +440,7 @@ border:None;</string>
                      <widget class="QDoubleSpinBox" name="rg_threshold_spinbox_5">
                       <property name="font">
                        <font>
-                        
-                        <weight>75</weight>
+                        <pointsize>-1</pointsize>
                         <bold>true</bold>
                        </font>
                       </property>
@@ -471,7 +459,7 @@ border-radius:7px;
                     <item>
                      <spacer name="horizontalSpacer_43">
                       <property name="orientation">
-                       <enum>Qt::Vertical</enum>
+                       <enum>Qt::Orientation::Vertical</enum>
                       </property>
                       <property name="sizeHint" stdset="0">
                        <size>
@@ -485,8 +473,7 @@ border-radius:7px;
                      <widget class="QLabel" name="label_param_8">
                       <property name="font">
                        <font>
-                        
-                        <weight>75</weight>
+                        <pointsize>-1</pointsize>
                         <bold>true</bold>
                        </font>
                       </property>
@@ -507,8 +494,7 @@ border:None;</string>
                      <widget class="QDoubleSpinBox" name="rg_threshold_spinbox_6">
                       <property name="font">
                        <font>
-                        
-                        <weight>75</weight>
+                        <pointsize>-1</pointsize>
                         <bold>true</bold>
                        </font>
                       </property>
@@ -529,7 +515,7 @@ border-radius:7px;
                   <item>
                    <spacer name="verticalSpacer_10">
                     <property name="orientation">
-                     <enum>Qt::Vertical</enum>
+                     <enum>Qt::Orientation::Vertical</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -544,7 +530,7 @@ border-radius:7px;
                     <item>
                      <spacer name="horizontalSpacer_37">
                       <property name="orientation">
-                       <enum>Qt::Vertical</enum>
+                       <enum>Qt::Orientation::Vertical</enum>
                       </property>
                       <property name="sizeHint" stdset="0">
                        <size>
@@ -558,8 +544,7 @@ border-radius:7px;
                      <widget class="QLabel" name="label_param_11">
                       <property name="font">
                        <font>
-                        
-                        <weight>75</weight>
+                        <pointsize>-1</pointsize>
                         <bold>true</bold>
                        </font>
                       </property>
@@ -579,7 +564,7 @@ border:None;</string>
                     <item>
                      <spacer name="verticalSpacer_47">
                       <property name="orientation">
-                       <enum>Qt::Vertical</enum>
+                       <enum>Qt::Orientation::Vertical</enum>
                       </property>
                       <property name="sizeHint" stdset="0">
                        <size>
@@ -593,8 +578,7 @@ border:None;</string>
                      <widget class="QDoubleSpinBox" name="rg_threshold_spinbox_9">
                       <property name="font">
                        <font>
-                        
-                        <weight>75</weight>
+                        <pointsize>-1</pointsize>
                         <bold>true</bold>
                        </font>
                       </property>
@@ -613,7 +597,7 @@ border-radius:7px;
                     <item>
                      <spacer name="horizontalSpacer_45">
                       <property name="orientation">
-                       <enum>Qt::Vertical</enum>
+                       <enum>Qt::Orientation::Vertical</enum>
                       </property>
                       <property name="sizeHint" stdset="0">
                        <size>
@@ -628,7 +612,7 @@ border-radius:7px;
                   <item>
                    <spacer name="verticalSpacer_13">
                     <property name="orientation">
-                     <enum>Qt::Vertical</enum>
+                     <enum>Qt::Orientation::Vertical</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -644,8 +628,7 @@ border-radius:7px;
                      <widget class="QLabel" name="label_param_12">
                       <property name="font">
                        <font>
-                        
-                        <weight>75</weight>
+                        <pointsize>-1</pointsize>
                         <bold>true</bold>
                        </font>
                       </property>
@@ -677,7 +660,7 @@ Font-size:17px;</string>
                     <item>
                      <spacer name="verticalSpacer_48">
                       <property name="orientation">
-                       <enum>Qt::Vertical</enum>
+                       <enum>Qt::Orientation::Vertical</enum>
                       </property>
                       <property name="sizeHint" stdset="0">
                        <size>
@@ -691,8 +674,7 @@ Font-size:17px;</string>
                      <widget class="QLabel" name="label_param_19">
                       <property name="font">
                        <font>
-                        
-                        <weight>75</weight>
+                        <pointsize>-1</pointsize>
                         <bold>true</bold>
                        </font>
                       </property>
@@ -737,14 +719,14 @@ Font-size:17px;</string>
                      <number>0</number>
                     </property>
                     <property name="orientation">
-                     <enum>Qt::Vertical</enum>
+                     <enum>Qt::Orientation::Vertical</enum>
                     </property>
                    </widget>
                   </item>
                   <item>
                    <spacer name="horizontalSpacer_40">
                     <property name="orientation">
-                     <enum>Qt::Vertical</enum>
+                     <enum>Qt::Orientation::Vertical</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -757,7 +739,7 @@ Font-size:17px;</string>
                   <item>
                    <spacer name="horizontalSpacer_14">
                     <property name="orientation">
-                     <enum>Qt::Vertical</enum>
+                     <enum>Qt::Orientation::Vertical</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -768,9 +750,23 @@ Font-size:17px;</string>
                    </spacer>
                   </item>
                   <item>
+                   <!-- <widget class="QPushButton" name="pushButton">
+                    <property name="styleSheet">
+                     <string notr="true">Font-size:17px;
+font-weight:bold;
+background:#fdfdfd;
+color:#5583ad;
+</string>
+                    </property>
+                    <property name="text">
+                     <string>Done</string>
+                    </property>
+                   </widget> -->
+                  </item>
+                  <item>
                    <spacer name="horizontalSpacer_15">
                     <property name="orientation">
-                     <enum>Qt::Vertical</enum>
+                     <enum>Qt::Orientation::Vertical</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -786,7 +782,7 @@ Font-size:17px;</string>
                      <string notr="true">border: 0.5px solid black;</string>
                     </property>
                     <property name="orientation">
-                     <enum>Qt::Vertical</enum>
+                     <enum>Qt::Orientation::Vertical</enum>
                     </property>
                    </widget>
                   </item>
@@ -816,8 +812,7 @@ background:#fdfdfd;
                    <widget class="QRadioButton" name="RadioButton_CannyEdge">
                     <property name="font">
                      <font>
-                      
-                      <weight>75</weight>
+                      <pointsize>-1</pointsize>
                       <bold>true</bold>
                      </font>
                     </property>
@@ -848,7 +843,7 @@ border-right:None;
                     <item>
                      <spacer name="horizontalSpacer_22">
                       <property name="orientation">
-                       <enum>Qt::Vertical</enum>
+                       <enum>Qt::Orientation::Vertical</enum>
                       </property>
                       <property name="sizeHint" stdset="0">
                        <size>
@@ -862,8 +857,7 @@ border-right:None;
                      <widget class="QLabel" name="label_param_1">
                       <property name="font">
                        <font>
-                        
-                        <weight>75</weight>
+                        <pointsize>-1</pointsize>
                         <bold>true</bold>
                        </font>
                       </property>
@@ -883,7 +877,7 @@ border:None;</string>
                     <item>
                      <spacer name="horizontalSpacer_29">
                       <property name="orientation">
-                       <enum>Qt::Vertical</enum>
+                       <enum>Qt::Orientation::Vertical</enum>
                       </property>
                       <property name="sizeHint" stdset="0">
                        <size>
@@ -935,14 +929,14 @@ QSlider::add-page:horizontal {
                        <number>100</number>
                       </property>
                       <property name="orientation">
-                       <enum>Qt::Horizontal</enum>
+                       <enum>Qt::Orientation::Horizontal</enum>
                       </property>
                      </widget>
                     </item>
                     <item>
                      <spacer name="horizontalSpacer_32">
                       <property name="orientation">
-                       <enum>Qt::Vertical</enum>
+                       <enum>Qt::Orientation::Vertical</enum>
                       </property>
                       <property name="sizeHint" stdset="0">
                        <size>
@@ -955,7 +949,7 @@ QSlider::add-page:horizontal {
                     <item>
                      <spacer name="horizontalSpacer_26">
                       <property name="orientation">
-                       <enum>Qt::Vertical</enum>
+                       <enum>Qt::Orientation::Vertical</enum>
                       </property>
                       <property name="sizeHint" stdset="0">
                        <size>
@@ -972,7 +966,7 @@ QSlider::add-page:horizontal {
                     <item>
                      <spacer name="horizontalSpacer_24">
                       <property name="orientation">
-                       <enum>Qt::Vertical</enum>
+                       <enum>Qt::Orientation::Vertical</enum>
                       </property>
                       <property name="sizeHint" stdset="0">
                        <size>
@@ -986,8 +980,7 @@ QSlider::add-page:horizontal {
                      <widget class="QLabel" name="label_param_2">
                       <property name="font">
                        <font>
-                        
-                        <weight>75</weight>
+                        <pointsize>-1</pointsize>
                         <bold>true</bold>
                        </font>
                       </property>
@@ -1006,7 +999,7 @@ border:None;</string>
                     <item>
                      <spacer name="horizontalSpacer_27">
                       <property name="orientation">
-                       <enum>Qt::Vertical</enum>
+                       <enum>Qt::Orientation::Vertical</enum>
                       </property>
                       <property name="sizeHint" stdset="0">
                        <size>
@@ -1061,14 +1054,14 @@ QSlider::add-page:horizontal {
                        <bool>true</bool>
                       </property>
                       <property name="orientation">
-                       <enum>Qt::Horizontal</enum>
+                       <enum>Qt::Orientation::Horizontal</enum>
                       </property>
                      </widget>
                     </item>
                     <item>
                      <spacer name="horizontalSpacer_33">
                       <property name="orientation">
-                       <enum>Qt::Vertical</enum>
+                       <enum>Qt::Orientation::Vertical</enum>
                       </property>
                       <property name="sizeHint" stdset="0">
                        <size>
@@ -1081,7 +1074,7 @@ QSlider::add-page:horizontal {
                     <item>
                      <spacer name="horizontalSpacer_25">
                       <property name="orientation">
-                       <enum>Qt::Vertical</enum>
+                       <enum>Qt::Orientation::Vertical</enum>
                       </property>
                       <property name="sizeHint" stdset="0">
                        <size>
@@ -1107,7 +1100,7 @@ QSlider::add-page:horizontal {
                      <number>0</number>
                     </property>
                     <property name="orientation">
-                     <enum>Qt::Vertical</enum>
+                     <enum>Qt::Orientation::Vertical</enum>
                     </property>
                    </widget>
                   </item>
@@ -1117,7 +1110,7 @@ QSlider::add-page:horizontal {
                      <string notr="true">border: 0.5px solid black;</string>
                     </property>
                     <property name="orientation">
-                     <enum>Qt::Vertical</enum>
+                     <enum>Qt::Orientation::Vertical</enum>
                     </property>
                    </widget>
                   </item>
@@ -1126,7 +1119,7 @@ QSlider::add-page:horizontal {
                     <item>
                      <spacer name="horizontalSpacer_34">
                       <property name="orientation">
-                       <enum>Qt::Vertical</enum>
+                       <enum>Qt::Orientation::Vertical</enum>
                       </property>
                       <property name="sizeHint" stdset="0">
                        <size>
@@ -1140,8 +1133,7 @@ QSlider::add-page:horizontal {
                      <widget class="QLabel" name="label_param_5">
                       <property name="font">
                        <font>
-                        
-                        <weight>75</weight>
+                        <pointsize>-1</pointsize>
                         <bold>true</bold>
                        </font>
                       </property>
@@ -1160,7 +1152,7 @@ border:None;</string>
                     <item>
                      <spacer name="horizontalSpacer_31">
                       <property name="orientation">
-                       <enum>Qt::Vertical</enum>
+                       <enum>Qt::Orientation::Vertical</enum>
                       </property>
                       <property name="sizeHint" stdset="0">
                        <size>
@@ -1224,17 +1216,17 @@ QSlider::add-page:horizontal {
                        <number>3</number>
                       </property>
                       <property name="orientation">
-                       <enum>Qt::Horizontal</enum>
+                       <enum>Qt::Orientation::Horizontal</enum>
                       </property>
                       <property name="tickPosition">
-                       <enum>QSlider::TicksBelow</enum>
+                       <enum>QSlider::TickPosition::TicksBelow</enum>
                       </property>
                      </widget>
                     </item>
                     <item>
                      <spacer name="horizontalSpacer_35">
                       <property name="orientation">
-                       <enum>Qt::Vertical</enum>
+                       <enum>Qt::Orientation::Vertical</enum>
                       </property>
                       <property name="sizeHint" stdset="0">
                        <size>
@@ -1247,7 +1239,7 @@ QSlider::add-page:horizontal {
                     <item>
                      <spacer name="horizontalSpacer_36">
                       <property name="orientation">
-                       <enum>Qt::Vertical</enum>
+                       <enum>Qt::Orientation::Vertical</enum>
                       </property>
                       <property name="sizeHint" stdset="0">
                        <size>
@@ -1262,7 +1254,7 @@ QSlider::add-page:horizontal {
                   <item>
                    <spacer name="verticalSpacer_16">
                     <property name="orientation">
-                     <enum>Qt::Vertical</enum>
+                     <enum>Qt::Orientation::Vertical</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -1276,8 +1268,7 @@ QSlider::add-page:horizontal {
                    <widget class="QRadioButton" name="RadioButton_ShapeDetector">
                     <property name="font">
                      <font>
-                      
-                      <weight>75</weight>
+                      <pointsize>-1</pointsize>
                       <bold>true</bold>
                      </font>
                     </property>
@@ -1305,7 +1296,7 @@ border-right:None;
                     <item>
                      <spacer name="horizontalSpacer_51">
                       <property name="orientation">
-                       <enum>Qt::Vertical</enum>
+                       <enum>Qt::Orientation::Vertical</enum>
                       </property>
                       <property name="sizeHint" stdset="0">
                        <size>
@@ -1319,8 +1310,7 @@ border-right:None;
                      <widget class="QLabel" name="label_param_9">
                       <property name="font">
                        <font>
-                        
-                        <weight>75</weight>
+                        <pointsize>-1</pointsize>
                         <bold>true</bold>
                        </font>
                       </property>
@@ -1339,7 +1329,7 @@ border:None;</string>
                     <item>
                      <spacer name="horizontalSpacer_52">
                       <property name="orientation">
-                       <enum>Qt::Vertical</enum>
+                       <enum>Qt::Orientation::Vertical</enum>
                       </property>
                       <property name="sizeHint" stdset="0">
                        <size>
@@ -1403,17 +1393,17 @@ QSlider::add-page:horizontal {
                        <number>3</number>
                       </property>
                       <property name="orientation">
-                       <enum>Qt::Horizontal</enum>
+                       <enum>Qt::Orientation::Horizontal</enum>
                       </property>
                       <property name="tickPosition">
-                       <enum>QSlider::TicksBelow</enum>
+                       <enum>QSlider::TickPosition::TicksBelow</enum>
                       </property>
                      </widget>
                     </item>
                     <item>
                      <spacer name="horizontalSpacer_53">
                       <property name="orientation">
-                       <enum>Qt::Vertical</enum>
+                       <enum>Qt::Orientation::Vertical</enum>
                       </property>
                       <property name="sizeHint" stdset="0">
                        <size>
@@ -1426,7 +1416,7 @@ QSlider::add-page:horizontal {
                     <item>
                      <spacer name="horizontalSpacer_54">
                       <property name="orientation">
-                       <enum>Qt::Vertical</enum>
+                       <enum>Qt::Orientation::Vertical</enum>
                       </property>
                       <property name="sizeHint" stdset="0">
                        <size>
@@ -1443,7 +1433,7 @@ QSlider::add-page:horizontal {
                     <item>
                      <spacer name="horizontalSpacer_4">
                       <property name="orientation">
-                       <enum>Qt::Horizontal</enum>
+                       <enum>Qt::Orientation::Horizontal</enum>
                       </property>
                       <property name="sizeHint" stdset="0">
                        <size>
@@ -1457,8 +1447,7 @@ QSlider::add-page:horizontal {
                      <widget class="QRadioButton" name="RadioButton_Line">
                       <property name="font">
                        <font>
-                        
-                        <weight>75</weight>
+                        <pointsize>-1</pointsize>
                         <bold>true</bold>
                        </font>
                       </property>
@@ -1481,7 +1470,7 @@ border:None;</string>
                     <item>
                      <spacer name="horizontalSpacer_3">
                       <property name="orientation">
-                       <enum>Qt::Horizontal</enum>
+                       <enum>Qt::Orientation::Horizontal</enum>
                       </property>
                       <property name="sizeHint" stdset="0">
                        <size>
@@ -1495,8 +1484,7 @@ border:None;</string>
                      <widget class="QRadioButton" name="RadioButton_Circle">
                       <property name="font">
                        <font>
-                        <pointsize>1</pointsize>
-                        <weight>75</weight>
+                        <pointsize>-1</pointsize>
                         <bold>true</bold>
                        </font>
                       </property>
@@ -1519,7 +1507,7 @@ border:None;</string>
                     <item>
                      <spacer name="horizontalSpacer_38">
                       <property name="orientation">
-                       <enum>Qt::Vertical</enum>
+                       <enum>Qt::Orientation::Vertical</enum>
                       </property>
                       <property name="sizeHint" stdset="0">
                        <size>
@@ -1532,7 +1520,7 @@ border:None;</string>
                     <item>
                      <spacer name="horizontalSpacer_5">
                       <property name="orientation">
-                       <enum>Qt::Horizontal</enum>
+                       <enum>Qt::Orientation::Horizontal</enum>
                       </property>
                       <property name="sizeHint" stdset="0">
                        <size>
@@ -1549,7 +1537,7 @@ border:None;</string>
                     <item>
                      <spacer name="horizontalSpacer_2">
                       <property name="orientation">
-                       <enum>Qt::Horizontal</enum>
+                       <enum>Qt::Orientation::Horizontal</enum>
                       </property>
                       <property name="sizeHint" stdset="0">
                        <size>
@@ -1562,7 +1550,7 @@ border:None;</string>
                     <item>
                      <spacer name="horizontalSpacer_39">
                       <property name="orientation">
-                       <enum>Qt::Vertical</enum>
+                       <enum>Qt::Orientation::Vertical</enum>
                       </property>
                       <property name="sizeHint" stdset="0">
                        <size>
@@ -1576,8 +1564,7 @@ border:None;</string>
                      <widget class="QRadioButton" name="RadioButton_Ellipse">
                       <property name="font">
                        <font>
-                        
-                        <weight>75</weight>
+                        <pointsize>-1</pointsize>
                         <bold>true</bold>
                        </font>
                       </property>
@@ -1599,7 +1586,7 @@ border:None;</string>
                     <item>
                      <spacer name="horizontalSpacer">
                       <property name="orientation">
-                       <enum>Qt::Horizontal</enum>
+                       <enum>Qt::Orientation::Horizontal</enum>
                       </property>
                       <property name="sizeHint" stdset="0">
                        <size>
@@ -1636,7 +1623,7 @@ border:None;</string>
      <x>0</x>
      <y>0</y>
      <width>1514</width>
-     <height>26</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>
