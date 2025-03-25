@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1514</width>
-    <height>902</height>
+    <width>1330</width>
+    <height>905</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -45,7 +45,7 @@
               <widget class="QLabel" name="label_13">
                <property name="font">
                 <font>
-                 
+                 <pointsize>1</pointsize>
                 </font>
                </property>
                <property name="styleSheet">
@@ -66,8 +66,6 @@ border:None;
                <property name="font">
                 <font>
                  
-                 <weight>75</weight>
-                 <bold>true</bold>
                 </font>
                </property>
                <property name="styleSheet">
@@ -742,6 +740,92 @@ Font-size:17px;</string>
                    </widget>
                   </item>
                   <item>
+                   <spacer name="verticalSpacer_11">
+                    <property name="orientation">
+                     <enum>Qt::Vertical</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>20</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_31">
+                    <item>
+                     <spacer name="horizontalSpacer_41">
+                      <property name="orientation">
+                       <enum>Qt::Vertical</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <spacer name="horizontalSpacer_6">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pushButton">
+                      <property name="styleSheet">
+                       <string notr="true">Font-size:15px;
+font-weight:bold;
+background: #ccd8e8;
+color:white;
+border:3px solid black;
+padding:2px;
+border-radius:7px;
+ border: 3px solid#5583ad;;</string>
+                      </property>
+                      <property name="text">
+                       <string>                   Done                    </string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <spacer name="horizontalSpacer_7">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <spacer name="horizontalSpacer_46">
+                      <property name="orientation">
+                       <enum>Qt::Vertical</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
                    <spacer name="horizontalSpacer_40">
                     <property name="orientation">
                      <enum>Qt::Vertical</enum>
@@ -833,7 +917,7 @@ border-right:None;
 </string>
                     </property>
                     <property name="text">
-                     <string>                                Canny Edge Detection</string>
+                     <string>                        Canny Edge Detection                               </string>
                     </property>
                     <property name="checked">
                      <bool>false</bool>
@@ -931,8 +1015,17 @@ QSlider::add-page:horizontal {
 
 </string>
                       </property>
+                      <property name="minimum">
+                       <number>5</number>
+                      </property>
                       <property name="maximum">
                        <number>100</number>
+                      </property>
+                      <property name="singleStep">
+                       <number>5</number>
+                      </property>
+                      <property name="value">
+                       <number>10</number>
                       </property>
                       <property name="orientation">
                        <enum>Qt::Horizontal</enum>
@@ -1054,8 +1147,20 @@ QSlider::add-page:horizontal {
 
 </string>
                       </property>
+                      <property name="minimum">
+                       <number>10</number>
+                      </property>
                       <property name="maximum">
-                       <number>100</number>
+                       <number>50</number>
+                      </property>
+                      <property name="singleStep">
+                       <number>5</number>
+                      </property>
+                      <property name="pageStep">
+                       <number>10</number>
+                      </property>
+                      <property name="value">
+                       <number>10</number>
                       </property>
                       <property name="tracking">
                        <bool>true</bool>
@@ -1209,19 +1314,19 @@ QSlider::add-page:horizontal {
 </string>
                       </property>
                       <property name="minimum">
-                       <number>1</number>
+                       <number>10</number>
                       </property>
                       <property name="maximum">
-                       <number>9</number>
+                       <number>50</number>
                       </property>
                       <property name="singleStep">
-                       <number>2</number>
+                       <number>5</number>
                       </property>
                       <property name="pageStep">
-                       <number>2</number>
+                       <number>10</number>
                       </property>
                       <property name="value">
-                       <number>3</number>
+                       <number>10</number>
                       </property>
                       <property name="orientation">
                        <enum>Qt::Horizontal</enum>
@@ -1260,19 +1365,6 @@ QSlider::add-page:horizontal {
                    </layout>
                   </item>
                   <item>
-                   <spacer name="verticalSpacer_16">
-                    <property name="orientation">
-                     <enum>Qt::Vertical</enum>
-                    </property>
-                    <property name="sizeHint" stdset="0">
-                     <size>
-                      <width>20</width>
-                      <height>40</height>
-                     </size>
-                    </property>
-                   </spacer>
-                  </item>
-                  <item>
                    <widget class="QRadioButton" name="RadioButton_ShapeDetector">
                     <property name="font">
                      <font>
@@ -1299,6 +1391,162 @@ border-right:None;
                      <bool>false</bool>
                     </property>
                    </widget>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_23">
+                    <item>
+                     <spacer name="horizontalSpacer_4">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <widget class="QRadioButton" name="RadioButton_Line">
+                      <property name="font">
+                       <font>
+                        
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">Font-size:17px;
+font-weight:bold;
+background:#fdfdfd;
+color:#5583ad;
+
+border:None;</string>
+                      </property>
+                      <property name="text">
+                       <string>Lines</string>
+                      </property>
+                      <property name="checked">
+                       <bool>false</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <spacer name="horizontalSpacer_3">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <spacer name="horizontalSpacer_38">
+                      <property name="orientation">
+                       <enum>Qt::Vertical</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <widget class="QRadioButton" name="RadioButton_Circle">
+                      <property name="font">
+                       <font>
+                        
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">Font-size:17px;
+font-weight:bold;
+background:#fdfdfd;
+color:#5583ad;
+
+border:None;</string>
+                      </property>
+                      <property name="text">
+                       <string>Circle</string>
+                      </property>
+                      <property name="checked">
+                       <bool>false</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <spacer name="horizontalSpacer_5">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <spacer name="horizontalSpacer_39">
+                      <property name="orientation">
+                       <enum>Qt::Vertical</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <widget class="QRadioButton" name="RadioButton_Ellipse">
+                      <property name="font">
+                       <font>
+                        
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">Font-size:17px;
+font-weight:bold;
+background:#fdfdfd;
+color:#5583ad;
+border:None;</string>
+                      </property>
+                      <property name="text">
+                       <string>Ellipse    </string>
+                      </property>
+                      <property name="checked">
+                       <bool>false</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <spacer name="horizontalSpacer_9">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                   </layout>
                   </item>
                   <item>
                    <layout class="QHBoxLayout" name="horizontalLayout_57">
@@ -1391,7 +1639,7 @@ QSlider::add-page:horizontal {
                        <number>1</number>
                       </property>
                       <property name="maximum">
-                       <number>10</number>
+                       <number>20</number>
                       </property>
                       <property name="singleStep">
                        <number>1</number>
@@ -1439,141 +1687,9 @@ QSlider::add-page:horizontal {
                    </layout>
                   </item>
                   <item>
-                   <layout class="QHBoxLayout" name="horizontalLayout_23">
+                   <layout class="QHBoxLayout" name="horizontalLayout_58">
                     <item>
-                     <spacer name="horizontalSpacer_4">
-                      <property name="orientation">
-                       <enum>Qt::Horizontal</enum>
-                      </property>
-                      <property name="sizeHint" stdset="0">
-                       <size>
-                        <width>40</width>
-                        <height>20</height>
-                       </size>
-                      </property>
-                     </spacer>
-                    </item>
-                    <item>
-                     <widget class="QRadioButton" name="RadioButton_Line">
-                      <property name="font">
-                       <font>
-                        
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">Font-size:17px;
-font-weight:bold;
-background:#fdfdfd;
-color:#5583ad;
-
-border:None;</string>
-                      </property>
-                      <property name="text">
-                       <string>Lines</string>
-                      </property>
-                      <property name="checked">
-                       <bool>false</bool>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <spacer name="horizontalSpacer_3">
-                      <property name="orientation">
-                       <enum>Qt::Horizontal</enum>
-                      </property>
-                      <property name="sizeHint" stdset="0">
-                       <size>
-                        <width>40</width>
-                        <height>20</height>
-                       </size>
-                      </property>
-                     </spacer>
-                    </item>
-                    <item>
-                     <widget class="QRadioButton" name="RadioButton_Circle">
-                      <property name="font">
-                       <font>
-                        <pointsize>1</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">Font-size:17px;
-font-weight:bold;
-background:#fdfdfd;
-color:#5583ad;
-
-border:None;</string>
-                      </property>
-                      <property name="text">
-                       <string>Circle</string>
-                      </property>
-                      <property name="checked">
-                       <bool>false</bool>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <spacer name="horizontalSpacer_38">
-                      <property name="orientation">
-                       <enum>Qt::Vertical</enum>
-                      </property>
-                      <property name="sizeHint" stdset="0">
-                       <size>
-                        <width>40</width>
-                        <height>20</height>
-                       </size>
-                      </property>
-                     </spacer>
-                    </item>
-                    <item>
-                     <spacer name="horizontalSpacer_5">
-                      <property name="orientation">
-                       <enum>Qt::Horizontal</enum>
-                      </property>
-                      <property name="sizeHint" stdset="0">
-                       <size>
-                        <width>40</width>
-                        <height>20</height>
-                       </size>
-                      </property>
-                     </spacer>
-                    </item>
-                   </layout>
-                  </item>
-                  <item>
-                   <layout class="QHBoxLayout" name="horizontalLayout_25">
-                    <item>
-                     <spacer name="horizontalSpacer_2">
-                      <property name="orientation">
-                       <enum>Qt::Horizontal</enum>
-                      </property>
-                      <property name="sizeHint" stdset="0">
-                       <size>
-                        <width>40</width>
-                        <height>20</height>
-                       </size>
-                      </property>
-                     </spacer>
-                    </item>
-                    <item>
-                     <spacer name="horizontalSpacer_39">
-                      <property name="orientation">
-                       <enum>Qt::Vertical</enum>
-                      </property>
-                      <property name="sizeHint" stdset="0">
-                       <size>
-                        <width>40</width>
-                        <height>20</height>
-                       </size>
-                      </property>
-                     </spacer>
-                    </item>
-                    <item>
-                     <widget class="QRadioButton" name="RadioButton_Ellipse">
+                     <widget class="QLabel" name="label_param_10">
                       <property name="font">
                        <font>
                         
@@ -1589,17 +1705,75 @@ color:#5583ad;
 border:None;</string>
                       </property>
                       <property name="text">
-                       <string>Ellipse                    </string>
-                      </property>
-                      <property name="checked">
-                       <bool>false</bool>
+                       <string>Min_radius  </string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <spacer name="horizontalSpacer">
+                     <widget class="QSlider" name="slider_Min_radius">
+                      <property name="styleSheet">
+                       <string notr="true">
+QSlider {
+    background: transparent; /* Make the entire slider background transparent */
+    border:None;
+}
+
+
+QSlider::groove:horizontal {
+    height: 8px;
+    background: :rgba(158,177,175,255); /* Lighter shade of the dark color */
+    border-radius: 4px;
+}
+
+QSlider::handle:horizontal {
+    background:  white; /* Mid-tone between the dark and lighter colors */
+    border: 2px solid #5583ad; /* Matches groove */
+    width: 20px;
+    height: 20px;
+    margin: -6px 0;
+    border-radius: 10px;
+}
+
+QSlider::sub-page:horizontal {
+    background: #5583ad; /* Matches handle */
+    border-radius: 4px;
+}
+
+QSlider::add-page:horizontal {
+   
+    border:2px solid #5583ad;
+    border-radius: 4px;
+}
+
+</string>
+                      </property>
+                      <property name="minimum">
+                       <number>1</number>
+                      </property>
+                      <property name="maximum">
+                       <number>30</number>
+                      </property>
+                      <property name="singleStep">
+                       <number>1</number>
+                      </property>
+                      <property name="pageStep">
+                       <number>1</number>
+                      </property>
+                      <property name="value">
+                       <number>3</number>
+                      </property>
                       <property name="orientation">
                        <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="tickPosition">
+                       <enum>QSlider::TicksBelow</enum>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <spacer name="horizontalSpacer_57">
+                      <property name="orientation">
+                       <enum>Qt::Vertical</enum>
                       </property>
                       <property name="sizeHint" stdset="0">
                        <size>
@@ -1608,6 +1782,88 @@ border:None;</string>
                        </size>
                       </property>
                      </spacer>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="label_param_13">
+                      <property name="font">
+                       <font>
+                        
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">Font-size:17px;
+font-weight:bold;
+background:#fdfdfd;
+color:#5583ad;
+border:None;</string>
+                      </property>
+                      <property name="text">
+                       <string>Max_radius  </string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QSlider" name="slider_Max_radius">
+                      <property name="styleSheet">
+                       <string notr="true">
+QSlider {
+    background: transparent; /* Make the entire slider background transparent */
+    border:None;
+}
+
+
+QSlider::groove:horizontal {
+    height: 8px;
+    background: :rgba(158,177,175,255); /* Lighter shade of the dark color */
+    border-radius: 4px;
+}
+
+QSlider::handle:horizontal {
+    background:  white; /* Mid-tone between the dark and lighter colors */
+    border: 2px solid #5583ad; /* Matches groove */
+    width: 20px;
+    height: 20px;
+    margin: -6px 0;
+    border-radius: 10px;
+}
+
+QSlider::sub-page:horizontal {
+    background: #5583ad; /* Matches handle */
+    border-radius: 4px;
+}
+
+QSlider::add-page:horizontal {
+   
+    border:2px solid #5583ad;
+    border-radius: 4px;
+}
+
+</string>
+                      </property>
+                      <property name="minimum">
+                       <number>1</number>
+                      </property>
+                      <property name="maximum">
+                       <number>200</number>
+                      </property>
+                      <property name="singleStep">
+                       <number>1</number>
+                      </property>
+                      <property name="pageStep">
+                       <number>1</number>
+                      </property>
+                      <property name="value">
+                       <number>3</number>
+                      </property>
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="tickPosition">
+                       <enum>QSlider::TicksBelow</enum>
+                      </property>
+                     </widget>
                     </item>
                    </layout>
                   </item>
@@ -1635,7 +1891,7 @@ border:None;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1514</width>
+     <width>1330</width>
      <height>26</height>
     </rect>
    </property>

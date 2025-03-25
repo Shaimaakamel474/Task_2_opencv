@@ -6,6 +6,8 @@ from Image_Widget import ImageWidget
 from PIL import Image
 from PyQt5.QtWidgets import QVBoxLayout
 from Shape_Detector import *
+
+from Canny import canny_edge_detection
 from ActiveContour import run_active_contour_demo
 
 # Load the UI file
@@ -55,7 +57,18 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.RadioButton_Circle.clicked.connect(self.Shape_detector_Modes)
         self.RadioButton_Ellipse.clicked.connect(self.Shape_detector_Modes)
         self.slider_Threshold.sliderReleased.connect(self.Shape_detector_Modes)
+        
 
+        self.RadioButton_CannyEdge.clicked.connect(self.Canny_Edge_Detection_Mode)
+        self.slider_Sigma.sliderReleased.connect(self.Canny_Edge_Detection_Mode)
+        self.slider_LowThreshold.sliderReleased.connect(self.Canny_Edge_Detection_Mode)
+        self.slider_HighThreshold.sliderReleased.connect(self.Canny_Edge_Detection_Mode)
+        self.slider_Min_radius.sliderReleased.connect(self.Shape_detector_Modes)
+        self.slider_Max_radius.sliderReleased.connect(self.Shape_detector_Modes)
+        self.display_value_canny_param()
+        self.display_value_shape_detector_param()
+
+        
         # ACTIVE CONTOUR CONTROLS #
         self.double_spin_boxes = []
         self.x_input = self.findChild(QSpinBox, "rg_threshold_spinbox_3")
@@ -88,20 +101,42 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             spin_box.setMaximum(1000)
 
     def Shape_detector_Modes(self):
+        if self.org_ImgWidget.image is None:
+            return
+        
         selected_button = self.Mode_group_2.checkedButton()
+        threshold_value=self.slider_Threshold.value()
+        
         threshold_value = self.slider_Threshold.value()
         if selected_button == self.RadioButton_Line:
+            self.slider_Threshold.setEnabled(True)
+            self.display_value_shape_detector_param(flag=False)
+            print(self.org_ImgWidget.image.shape)
+            lines_detected=Line_Detector(self.org_ImgWidget.image, self.org_ImgWidget.edges_Canny ,threshold_value/10 )
             lines_detected = Line_Detector(self.org_ImgWidget.image, self.org_ImgWidget.edges_Canny,
                                            threshold_value / 10)
             self.Output_Widget_1.Set_Image(lines_detected)
             self.Output_Widget_1.display_RGBImg()
-            print(f"slider value : {threshold_value} New Lines drawed")
         elif selected_button == self.RadioButton_Circle:
+            self.slider_Threshold.setEnabled(True)
+            print(self.org_ImgWidget.image.shape)
+            self.display_value_shape_detector_param()
+            min_radius=self.slider_Min_radius.value()
+            max_radius=self.slider_Max_radius.value()
+            circles_detected=detect_and_draw_hough_circles(image=self.org_ImgWidget.image ,threshold=threshold_value , radius=[max_radius , min_radius])
             circles_detected = detect_hough_circles(self.org_ImgWidget.image, bin_threshold=threshold_value / 10)
             self.Output_Widget_1.Set_Image(circles_detected)
             self.Output_Widget_1.display_RGBImg()
             print(f"slider value : {threshold_value / 10}New circles drawed")
         elif selected_button == self.RadioButton_Ellipse:
+            self.slider_Threshold.setEnabled(False)
+            self.display_value_shape_detector_param()
+            min_radius=self.slider_Min_radius.value()
+            max_radius=self.slider_Max_radius.value()
+            circles_detected=detect_ellipses_manual(image=self.org_ImgWidget.image  , min_axis=min_radius , max_axis=max_radius)
+            self.Output_Widget_1.Set_Image(circles_detected)
+            self.Output_Widget_1.display_RGBImg()
+            
             pass
 
     def on_new_image_uploaded(self):
@@ -117,7 +152,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         elif selected_button == self.RadioButton_ActiveContour:
             self.update_active_contour()
         elif selected_button == self.RadioButton_CannyEdge:
-            pass
+            self.Canny_Edge_Detection_Mode()
 
     def Remove_checked_Radios(self):
         self.RadioButton_CannyEdge.setChecked(False)
@@ -127,6 +162,56 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.RadioButton_Circle.setChecked(False)
         self.RadioButton_Ellipse.setChecked(False)
 
+
+
+    def Canny_Edge_Detection_Mode(self):
+        if self.org_ImgWidget.gray_img  is not  None:
+            self.display_value_canny_param()
+            sigma_value=self.slider_Sigma.value()
+            low_threshold_value=self.slider_LowThreshold.value()
+            high_threshold_value=self.slider_HighThreshold.value()
+            canny_image=canny_edge_detection(self.org_ImgWidget.gray_img ,sigma_value/100,low_threshold_value/100,high_threshold_value/100)
+            self.Output_Widget_1.Set_Image(canny_image)
+        
+
+
+
+    def display_value_canny_param(self):
+        sigma_value=self.slider_Sigma.value()
+        low_threshold_value=self.slider_LowThreshold.value()
+        high_threshold_value=self.slider_HighThreshold.value()
+        self.label_param_1.setText(f"Sigma : {sigma_value / 100:.2f}")
+        self.label_param_2.setText(f"Low_threshold  :  {low_threshold_value / 100:.2f}")
+        self.label_param_5.setText(f"High_threshold :  {high_threshold_value / 100:.2f}")
+
+
+
+    def display_value_shape_detector_param(self , flag=True):
+        threshold_value=self.slider_Threshold.value()
+        self.label_param_9.setText(f"Threshold : {threshold_value :.2f}")
+        if flag == False:
+            self.slider_Min_radius.setEnabled(False)
+            self.slider_Max_radius.setEnabled(False)
+            self.slider_Min_radius.setValue(0)
+            self.slider_Max_radius.setValue(0)
+            self.label_param_10.setText("Min Radius ")
+            self.label_param_13.setText("Max Radius ")
+            return
+
+        self.slider_Min_radius.setEnabled(True)
+        self.slider_Max_radius.setEnabled(True)    
+
+        # self.slider_Min_radius.setValue(1)
+        # self.slider_Max_radius.setValue(70)
+        min_radius=self.slider_Min_radius.value()
+        max_radius=self.slider_Max_radius.value()
+
+        self.label_param_10.setText(f"Min Radius : {min_radius}")
+        self.label_param_13.setText(f"Max Radius : {max_radius}")
+
+
+        
+if __name__=="__main__":
     # def update_active_contour(self):
     #     print("UPDATING CONTOUR")
     #     # Check if an image is loaded
