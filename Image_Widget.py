@@ -24,25 +24,23 @@ class ImageWidget(QWidget):
             print(f"Image Path: {self.image_path}")
             self.load_image(image_path)
     
-    # automatically run to paint the img
     def paintEvent(self, event):
         if self.pixmap:
             painter = QPainter(self)
-            # make img border raduis 
-            rect = QRectF(self.rect())
-            path = QPainterPath() 
-            path.addRoundedRect(rect, 20, 20) 
-            painter.setClipPath(path)
-           
-            # resize the img 
-            scaled_pixmap = self.pixmap.scaled(
-                # set its geomerty from the main
-                self.size(),
-                Qt.KeepAspectRatioByExpanding,
-                Qt.SmoothTransformation
-            )
-            
-            painter.drawPixmap(self.rect(), scaled_pixmap)
+            painter.setRenderHint(QPainter.Antialiasing)
+
+            widget_width = self.width()
+            widget_height = self.height()
+
+       
+            img_width = self.pixmap.width()
+            img_height = self.pixmap.height()
+
+            x = (widget_width - img_width) // 2
+            y = (widget_height - img_height) // 2
+
+
+            painter.drawPixmap(x, y, self.pixmap)
 
     def load_image(self, image_path):  
             # read image for processing and convert to grayscale
@@ -50,8 +48,8 @@ class ImageWidget(QWidget):
             self.image = cv2.imread(image_path)
             self.image = cv2.cvtColor(self.image, code=cv2.COLOR_BGR2RGB)
             # sure the resized_img is the size of widget 
-            self.image = cv2.resize(self.image, (self.width(), self.height()), interpolation=cv2.INTER_AREA)
-            
+            # self.image = cv2.resize(self.image, (self.width(), self.height()), interpolation=cv2.INTER_AREA)
+            self.image=cv2.resize(self.image, (400,400), interpolation=cv2.INTER_AREA)
             self.gray_img=cv2.cvtColor(self.image , cv2.COLOR_RGB2GRAY)
             # filtered=cv2.GaussianBlur(self.gray_img, (7, 7), 2)
             self.edges_Canny=cv2.Canny(self.gray_img, 50, 128)
@@ -70,16 +68,17 @@ class ImageWidget(QWidget):
         return self.image
     
 
-    def Set_Image(self , image):
+    def Set_Image(self , image , flag=True):
         self.image=image
         # sure the resized_img is the size of widget 
-        self.image = cv2.resize(self.image, (self.width(), self.height()), interpolation=cv2.INTER_AREA)
+        # self.image = cv2.resize(self.image, (self.width(), self.height()), interpolation=cv2.INTER_AREA)
         if (image.shape ==3 ) :
             self.image= cv2.cvtColor(self.image , code=cv2.COLOR_BGR2RGB)
             self.gray_img=cv2.cvtColor(self.image , cv2.COLOR_RGB2GRAY)
+            # self.image=cv2.resize(self.image, (400,400), interpolation=cv2.INTER_AREA)
         else : self.gray_img = image
 
-        
+        self.gray_img=cv2.resize(self.image, (400,400), interpolation=cv2.INTER_AREA)
         self.pixmap=self.convert_np_pixmap(self.gray_img)
 
         # repaint

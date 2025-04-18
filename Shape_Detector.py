@@ -47,8 +47,8 @@ def Line_Detector(image, edge_image, threshold=0.5, theta_res=1):
         x2 = int(x0 - 1000 * (-b))
         y2 = int(y0 - 1000 * (a))
         cv2.line(output_image, (x1, y1), (x2, y2), (255, 0, 0), 1)
-    modified_image_rgb = cv2.cvtColor(output_image, cv2.COLOR_BGR2RGB)
-    return modified_image_rgb
+    # modified_image_rgb = cv2.cvtColor(output_image, cv2.COLOR_BGR2RGB)
+    return output_image
 
 
 
@@ -162,9 +162,9 @@ def detect_and_draw_hough_circles(image, threshold=8.1, region=15, radius=[70, 2
                        x - max_radius), r, (255, 0, 0), 2)
 
         # Convert BGR image to RGB format
-        modified_image_rgb = cv2.cvtColor(modified_image, cv2.COLOR_BGR2RGB)
+        # modified_image_rgb = cv2.cvtColor(modified_image, cv2.COLOR_BGR2RGB)
 
-        return modified_image_rgb
+        return modified_image
 
 
 
@@ -311,5 +311,5 @@ def detect_ellipses_manual(image, min_axis=20, max_axis=300):
                 if min_axis <= major_axis <= max_axis and min_axis <= minor_axis <= max_axis:
                     cv2.ellipse(output_image, ((int(x), int(y)), (int(major_axis), int(minor_axis)), angle),
                                 (0, 255, 0), 2)
-    modified_image_rgb = cv2.cvtColor(output_image, cv2.COLOR_BGR2RGB)
-    return modified_image_rgb
+    # modified_image_rgb = cv2.cvtColor(output_image, cv2.COLOR_BGR2RGB)
+    return output_image
