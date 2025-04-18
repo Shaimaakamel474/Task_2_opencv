@@ -8,13 +8,10 @@ from PyQt5.QtWidgets import QVBoxLayout
 from Shape_Detector import *
 
 from Canny import canny_edge_detection
-<<<<<<< Updated upstream
 from ActiveContour import run_active_contour_demo
 
-=======
->>>>>>> Stashed changes
 # Load the UI file
-Ui_MainWindow, QtBaseClass = uic.loadUiType("MainWindow_new.ui")
+Ui_MainWindow, QtBaseClass = uic.loadUiType("MainWindow.ui")
 
 
 # Main Window
@@ -72,7 +69,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.display_value_shape_detector_param()
 
         
-<<<<<<< Updated upstream
         # ACTIVE CONTOUR CONTROLS #
         self.double_spin_boxes = []
         self.x_input = self.findChild(QSpinBox, "rg_threshold_spinbox_3")
@@ -103,8 +99,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             # spin_box.valueChanged.connect(self.update_active_contour)
             spin_box.setSingleStep(0.1)
             spin_box.setMaximum(1000)
-=======
->>>>>>> Stashed changes
 
     def Shape_detector_Modes(self):
         if self.org_ImgWidget.image is None:
@@ -113,10 +107,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         selected_button = self.Mode_group_2.checkedButton()
         threshold_value=self.slider_Threshold.value()
         
-<<<<<<< Updated upstream
         threshold_value = self.slider_Threshold.value()
-=======
->>>>>>> Stashed changes
+
         if selected_button == self.RadioButton_Line:
             self.slider_Threshold.setEnabled(True)
             self.display_value_shape_detector_param(flag=False)
@@ -133,15 +125,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             min_radius=self.slider_Min_radius.value()
             max_radius=self.slider_Max_radius.value()
             circles_detected=detect_and_draw_hough_circles(image=self.org_ImgWidget.image ,threshold=threshold_value , radius=[max_radius , min_radius])
-<<<<<<< Updated upstream
-            circles_detected = detect_hough_circles(self.org_ImgWidget.image, bin_threshold=threshold_value / 10)
             self.Output_Widget_1.Set_Image(circles_detected)
             self.Output_Widget_1.display_RGBImg()
-            print(f"slider value : {threshold_value / 10}New circles drawed")
-=======
-            self.Output_Widget_1.Set_Image(circles_detected)
-            self.Output_Widget_1.display_RGBImg()
->>>>>>> Stashed changes
         elif selected_button == self.RadioButton_Ellipse:
             self.slider_Threshold.setEnabled(False)
             self.display_value_shape_detector_param()
@@ -167,11 +152,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.update_active_contour()
         elif selected_button == self.RadioButton_CannyEdge:
             self.Canny_Edge_Detection_Mode()
-<<<<<<< Updated upstream
-=======
 
 
->>>>>>> Stashed changes
 
     def Remove_checked_Radios(self):
         self.RadioButton_CannyEdge.setChecked(False)
@@ -182,7 +164,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.RadioButton_Ellipse.setChecked(False)
 
 
-<<<<<<< Updated upstream
 
     def Canny_Edge_Detection_Mode(self):
         if self.org_ImgWidget.gray_img  is not  None:
@@ -231,7 +212,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
 
         
-if __name__=="__main__":
+# if __name__=="__main__":
     # def update_active_contour(self):
     #     print("UPDATING CONTOUR")
     #     # Check if an image is loaded
@@ -315,15 +296,18 @@ if __name__=="__main__":
             img = cv2.imread("contoured.png")
             self.Output_Widget_1.Set_Image(img)
 
-            self.area_label.setText(str(results['area']))
-            self.perimeter_label.setText(str(results['perimeter']))
+            # self.area_label.setText(str(results['area']))
+            # self.perimeter_label.setText(str(results['perimeter']))
+
+            self.area_label.setText(f"{str(results['area'])} pixels^2")
+            # peri = results['perimeter'].2f
+            self.perimeter_label.setText(f"{str(results['perimeter'])} pixels")
         except Exception as e:
             print(f"EXCEPTION: {e}")
     
 
 
-if __name__ == "__main__":
-=======
+# if __name__ == "__main__":
 
     def Canny_Edge_Detection_Mode(self):
         if self.org_ImgWidget.gray_img  is not  None:
@@ -373,7 +357,6 @@ if __name__ == "__main__":
 
         
 if __name__=="__main__":
->>>>>>> Stashed changes
     app = QApplication(sys.argv)
     mainWindow = MainWindow()
 
